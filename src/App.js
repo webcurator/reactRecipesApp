@@ -12,21 +12,21 @@ class App extends Component {
 
   };
   
-  // async getRecipes() {
-  //   try {
-  //     const data = await fetch(this.state.url);
-  //     const jsonData = await data.json();
-  //     this.setState({
-  //       recipes: jsonData.recipes
-  //     })
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
+  async getRecipes() {
+    try {
+      const data = await fetch(this.state.url);
+      const jsonData = await data.json();
+      this.setState({
+        recipes: jsonData.recipes
+      })
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
-  // componentDidMount() {
-  //   this.getRecipes()
-  // }
+  componentDidMount() {
+    this.getRecipes()
+  }
 
   render() {
     // console.log(this.state.recipes);
